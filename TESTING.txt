@@ -1,0 +1,6 @@
+INPUT                 |PROCESS                 |OUTPUT
+user clicks on a      |the website should      |
+widget on the home    |generate the new        |
+page.                 |webpage using           |
+                      |"react-router-dom" Link |
+                      |element

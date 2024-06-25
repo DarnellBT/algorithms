@@ -1,0 +1,24 @@
+react version 17.0.2
+
+BubbleSort.tsx
+|
+`-> id format for each SortRect component: "SortRect-{orderPos}"
+    |
+    `-> orderPos: corresponds with the graphical posistion of each SortRect component on the screen at all times
+
+BubbleSort.tsx
+- it changes yellow bars to blue bars when new swap occurs
+from lines 202 - 213
+
+~~ ostrich aglorithm - Leave small bugs in that do not fundamentally break the website
+LOG OF BUGS
+{
+## format : priority file function/values description ##
+> LOW BubbleSort animate If sort is pressed while sorting is in process, it will either stop or start a new sort at the 
+  same time instead of reseting the sort and then commencing the newly submitted sort.
+}
+
+#removed framer motion as not needed
+#write code in a syntax close to pseudocode
+#when sortbars/searchblocks are changed automatically adjust spacing and widths
+#message if input is invalid

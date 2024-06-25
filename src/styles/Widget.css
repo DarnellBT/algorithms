@@ -1,0 +1,32 @@
+.widget {
+  display: flex;
+  aspect-ratio: 1;
+  min-height: 200px;
+  border-radius: 5px;
+  align-items: center; /*align widget items inside widget*/
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #505050;
+  transition: transform 0.25s;
+}
+
+.widget:hover {
+  transform: scale(1.03);
+}
+
+.widget:active {
+  transform: scale(0.97);
+}
+
+.widget-link {
+  text-decoration: none;
+}
+
+.widget > p {
+  color: #140c08;
+  font-size: 1.5em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

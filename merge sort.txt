@@ -1,0 +1,65 @@
+// SPLIT THE BLOCKS IN HALF
+    let pos :number = 1;
+    let elements1 :React.ReactElement<SearchBlock>[] = [];
+    let elements2 :React.ReactElement<SearchBlock>[] = [];
+    let blockValuesMiddle :number = Math.ceil((this.blockValues.length - 1) / 2);
+    let middleIndex :number = Math.ceil(animation.startIndex + animation.endIndex / 2);
+
+    for(let i = animation.startIndex; i < middleIndex; i++) {
+      elements1.push(document.getElementById(`SearchBlock-${i}`));
+    }
+
+    for(let i = middleIndex; i <= animation.endIndex; i++) {
+      elements2.push(document.getElementById(`SearchBlock-${i}`));
+    }
+    
+    let intervalId: number = setInterval(
+      (): void => {
+
+        if(pos === 5) {
+          clearInterval(intervalId);
+        }
+
+        console.log(animation.startIndex);
+        console.log(blockValuesMiddle);
+        console.log(animation.endIndex);
+
+        if(animation.endIndex - animation.startIndex === this.blockValues.length - 1) { // checks if this is the first division
+          console.log("middle");
+          elements1.map((element :React.ReactElement<SearchBlock>) :void => element.setAttribute("transform", `translate(${-pos})`));
+          elements2.map((element :React.ReactElement<SearchBlock>) :void => element.setAttribute("transform", `translate(${pos})`));
+        }
+
+        if(animation.endIndex < blockValuesMiddle) {
+          console.log("lower");
+          elements1.map(
+            (element :React.ReactElement<SearchBlock>) :void => {
+              let currentPos :number = parseInt(element.getAttribute("transform").match(/\d+/)[0]); // gets current translate position
+              element.setAttribute("transform", `translate(${currentPos - pos * 2})`);
+            }
+          );
+          elements2.map(
+            (element :React.ReactElement<SearchBlock>) :void => {
+              let currentPos :number = parseInt(element.getAttribute("transform").match(/\d+/)[0]); // gets current translate position
+              element.setAttribute("transform", `translate(${currentPos - pos})`);
+            }
+          );
+        }
+        
+        if(animation.startIndex >= blockValuesMiddle) {
+          console.log("upper");
+          elements1.map(
+            (element :React.ReactElement<SearchBlock>) :void => {
+              let currentPos :number = parseInt(element.getAttribute("transform").match(/\d+/)[0]); // gets current translate position
+              element.setAttribute("transform", `translate(${currentPos + pos * 2})`);
+            }
+          );
+          elements2.map(
+            (element :React.ReactElement<SearchBlock>) :void => {
+              let currentPos :number = parseInt(element.getAttribute("transform").match(/\d+/)[0]); // gets current translate position
+              element.setAttribute("transform", `translate(${currentPos + pos})`);
+            }
+          );
+        }
+        pos++;
+      }

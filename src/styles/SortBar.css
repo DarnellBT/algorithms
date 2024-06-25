@@ -1,0 +1,7 @@
+.sort-bar > text {
+  color: #140c08;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
