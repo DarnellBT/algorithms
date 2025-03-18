@@ -9,28 +9,32 @@ A brief description of what this project does and who it's for
 Clone the project
 
 ```bash
-  git clone https://github.com/DarnellBT/algorithms.git
+git clone https://github.com/DarnellBT/algorithms.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd algorithms
+cd algorithms
 ```
 
 Install dependencies
 
 ```bash
-  npm i
+npm i
+```
+or
+```bash
+npm install
 ```
 
 Start the server
 
 ```bash
-  npm run dev
+npm run dev
 ```
 or
 ```bash
-  yarn dev
+yarn dev
 ```
 
