@@ -9,7 +9,7 @@ type ErrorBoundaryStateType = {
 };
 
 class ErrorBoundary extends React.Component<
-  ErrorBoundaryPropType,
+  React.PropsWithChildren<ErrorBoundaryPropType>,
   ErrorBoundaryStateType
 > {
   constructor(props: ErrorBoundaryPropType) {

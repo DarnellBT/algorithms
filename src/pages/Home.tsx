@@ -16,13 +16,11 @@ class Home extends React.Component {
     "Bubble Sort",
     "Binary Search",
     "Linear Search",
-    "Dijkstra",
   ];
   private readonly hrefs: string[] = [
     "/bubble-sort",
     "/binary-search",
     "/linear-search",
-    "/dijkstra",
   ];
 
   private readonly widgetContent: WidgetContentType[] = this.labels.map(

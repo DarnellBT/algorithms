@@ -5,7 +5,6 @@ import Home from "@pages/Home";
 import BubbleSort from "@pages/BubbleSort";
 import BinarySearch from "@pages/BinarySearch";
 import LinearSearch from "@pages/LinearSearch";
-import Dijkstra from "@pages/Dijkstra";
 
 class App extends React.Component {
   // returns elements for App object in main.tsx
@@ -17,7 +16,6 @@ class App extends React.Component {
           <Route path="/bubble-sort" element={<BubbleSort />} />
           <Route path="/binary-search" element={<BinarySearch />} />
           <Route path="/linear-search" element={<LinearSearch />} />
-          <Route path="/dijkstra" element={<Dijkstra />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
