@@ -1,8 +1,11 @@
 
-# Visual Algorithms
+# Algorithm Visualisation Tool
 
-A brief description of what this project does and who it's for
+Shows visual representations of algorithms:
 
++ Linear Search
++ Binary Search
++ Bubble Sort
 
 ## Run Locally
 
